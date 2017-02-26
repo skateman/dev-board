@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+# Wait for Redis to start
+until netstat -tlp | grep -q redis
+do
+  sleep 0.1
+done
+
+# Flush the database
+redis-cli FLUSHALL
+# Insert the first job
+bin/rails runner "FetchJob.perform_later"
+# Start sidekiq
+bin/bundle exec sidekiq

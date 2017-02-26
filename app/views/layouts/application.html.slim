@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title DeveloperDashboard
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+  body
+    nav.navbar.navbar-default.navbar-pf
+      .navbar-header
+        a.navbar-brand href="/"
+          img src=image_path('brand.svg')
+      .collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-utility
+          li
+            a href="/sidekiq" Sidekiq Dashboard
+    .container-fluid style="margin-top: 20px;"
+      - flash.each do |type, message|
+        .alert.fade.in class=flash_div_class(type)
+          button.close data-dismiss="alert"
+            i.glyphicon.glyphicon-remove-circle
+          i.pficon class=flash_icon_class(type)
+          = message
+      = yield

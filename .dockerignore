@@ -1,0 +1,10 @@
+Dockerfile
+.dockerignore
+.gitignore
+.git
+tmp
+log
+Gemfile.lock
+config/secrets.yml
+Procfile
+Procfile.tmpl

@@ -1,0 +1,34 @@
+- if @results
+  table.table.table-striped.table-bordered.table-hover
+    thead
+      tr
+        td #
+        td Title
+        td C/M/W
+        td Labels
+        td Creator
+        td Assignee
+        td Created
+        td Modified
+    tbody
+      - @results.each do |result|
+        tr data-click="http://github.com/#{@repo}/pull/#{result['number']}"
+          td
+            = result['number']
+          td
+            = result['title']
+          td.text-center
+            i.pficon class=status_icon_class(result['status']) title="Travis #{result['status']}"
+            | &nbsp;
+            i.pficon class=status_icon_class(result['merge']) title=(result['merge'] ? 'Mergeable' : 'Unmergeable')
+            - if result['wip']
+              | &nbsp;
+              i.fa.fa-cog.fa-spin title="WIP"
+          td
+            - result['labels'].each do |label|
+              span.label style="background-color: #{label['color']}; color: #{label['text']};" = label['name']
+              | &nbsp;
+          td = result['user']
+          td = result['assign']
+          td = time_ago(result['created'])
+          td = time_ago(result['updated'])
