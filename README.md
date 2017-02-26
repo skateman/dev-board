@@ -1,11 +1,14 @@
 # Developer Dashboard
 
+[![Dependency Status](https://gemnasium.com/badges/github.com/skateman/dev-board.svg)](https://gemnasium.com/github.com/skateman/dev-board)
+[![Docker Automated build](https://img.shields.io/docker/automated/skateman/dev-board.svg)]()
+
 The Developer Dashboard is a Rails application that displays open PRs for a preconfigured repository. It has been tailored for my specific needs, therefore, it might be not convenient for anyone else. However, feel free to open PRs or issues containing your idea how to make it better.
 
 ## Installation
 
 ### Docker container
-The application is packed as an all-in-one docker container, that can be started by the following command:
+The application is packed as an all-in-one [docker container](https://hub.docker.com/r/skateman/dev-board/), that can be started by the following command:
 
 ```sh
 docker run -p 3000:3000 \
