@@ -1,7 +1,7 @@
 # Developer Dashboard
 
 [![Dependency Status](https://gemnasium.com/badges/github.com/skateman/dev-board.svg)](https://gemnasium.com/github.com/skateman/dev-board)
-[![Docker Automated build](https://img.shields.io/docker/automated/skateman/dev-board.svg)]()
+[![Docker Automated build](https://img.shields.io/docker/automated/skateman/dev-board.svg)](https://hub.docker.com/r/skateman/dev-board/)
 
 The Developer Dashboard is a Rails application that displays open PRs for a preconfigured repository. It has been tailored for my specific needs, therefore, it might be not convenient for anyone else. However, feel free to open PRs or issues containing your idea how to make it better.
 
