@@ -5,6 +5,8 @@
 
 The Developer Dashboard is a Rails application that displays open PRs for a preconfigured repository. It has been tailored for my specific needs, therefore, it might be not convenient for anyone else. However, feel free to open PRs or issues containing your idea how to make it better.
 
+![screen shot 2017-02-27 at 17 49 29](https://cloud.githubusercontent.com/assets/1187051/23370483/1dbf0ab4-fd15-11e6-9c5b-0733a4516c55.png)
+
 ## Installation
 
 ### Docker container
