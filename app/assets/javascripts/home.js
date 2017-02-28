@@ -1,5 +1,5 @@
 $(function () {
-  $('table > tbody > tr').click(function () {
+  $('body').on('click', 'table > tbody > tr', function () {
     window.open($(this).attr('data-click'), '_blank');
   });
 
